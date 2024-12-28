@@ -1,7 +1,7 @@
 package com.assignment.musiclibrary.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -9,6 +9,8 @@ import java.util.UUID;
 @Entity
 @Data
 @Table
+@Getter
+@Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,5 +38,33 @@ public class User {
         this.role = role;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    // Setter for password
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Getter for email
+    public String getEmail() {
+        return email;
+    }
+
+    // Setter for email
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Getter for userId
+    public UUID getUserId() {
+        return userId;
+    }
+
+    // Setter for userId
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
 
 }
