@@ -62,7 +62,6 @@ public class ArtistController {
         return ResponseEntity.status(204).build();
     }
 
-    // DELETE /artists/{id} - Delete Artist
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteArtist(@RequestHeader("Authorization") String token,
                                           @PathVariable UUID id) {

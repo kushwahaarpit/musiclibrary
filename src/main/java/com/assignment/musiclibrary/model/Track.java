@@ -18,8 +18,6 @@ public class Track {
 
     @Id
     private UUID trackId;
-    private String artistId;
-    private String albumId;
     private String name;
     private int duration;
     private boolean hidden;
@@ -36,12 +34,10 @@ public class Track {
         return name;
     }
 
-    // Setter for name
     public void setName(String name) {
         this.name = name;
     }
 
-    // Other getters and setters for the fields
     public UUID getTrackId() {
         return trackId;
     }

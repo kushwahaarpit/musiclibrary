@@ -20,39 +20,32 @@ public class AddUserRequest {
     @Pattern(regexp = "EDITOR|VIEWER", message = "Role must be 'editor' or 'viewer'.")
     private String role;
 
-    // Constructor
     public AddUserRequest(String email, String password, String role) {
         this.email = email;
         this.password = password;
         this.role = role;
     }
 
-    // Getter for email
     public String getEmail() {
         return email;
     }
 
-    // Setter for email
     public void setEmail(String email) {
         this.email = email;
     }
 
-    // Getter for password
     public String getPassword() {
         return password;
     }
 
-    // Setter for password
     public void setPassword(String password) {
         this.password = password;
     }
 
-    // Getter for role
     public String getRole() {
         return role;
     }
 
-    // Setter for role
     public void setRole(String role) {
         this.role = role;
     }

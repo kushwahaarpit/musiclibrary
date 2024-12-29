@@ -20,8 +20,8 @@ public class Favorite {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    private String category; // "artist", "album", "track"
-    private Long itemId; // ID of the item (Artist, Album, Track)
+    private String category;
+    private Long itemId;
     private String createdAt;
 
 

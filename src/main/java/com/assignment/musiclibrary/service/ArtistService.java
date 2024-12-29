@@ -40,7 +40,6 @@ public class ArtistService {
         return null;
     }
 
-    // Method to delete an artist
     public boolean deleteArtist(UUID id) {
         if (artistRepository.existsById(id)) {
             artistRepository.deleteById(id);

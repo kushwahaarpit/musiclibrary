@@ -13,7 +13,6 @@ public class FavoriteService {
     private FavoriteRepository favoriteRepository;
 
     public ResponseEntity<Object> getFavorites(String category, Integer limit, Integer offset) {
-        // Logic to retrieve the list of favorites based on category
         return ResponseEntity.status(200).body("Favorites fetched successfully.");
     }
 

@@ -16,7 +16,6 @@ public class AlbumService {
 
     // Method to get all albums with filters
     public List<Album> getAllAlbums(int limit, int offset, Boolean hidden, String artistId) {
-        // Add filters based on hidden, artistId, limit, and offset
         return albumRepository.findAll();
     }
 

@@ -15,8 +15,7 @@ import java.util.List;
 public class Album {
 
     @Id
-    private String id;
-    private String artistId;
+    private String albumId;
     private String name;
     private int year;
     private boolean hidden;

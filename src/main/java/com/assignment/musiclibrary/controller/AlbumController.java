@@ -17,20 +17,19 @@ public class AlbumController {
     @Autowired
     private JwtUtil jwtUtil;
 
-    // GET /albums - Retrieve All Albums
+    // Retrieve All Albums
     @GetMapping
     public ResponseEntity<?> getAllAlbums(@RequestHeader("Authorization") String token,
                                           @RequestParam(value = "limit", defaultValue = "5") int limit,
                                           @RequestParam(value = "offset", defaultValue = "0") int offset,
                                           @RequestParam(value = "hidden", required = false) Boolean hidden,
                                           @RequestParam(value = "artist_id", required = false) String artistId) {
-        // Handle access control based on token if needed
 
         var albums = albumService.getAllAlbums(limit, offset, hidden, artistId);
         return ResponseEntity.ok(albums);
     }
 
-    // GET /albums/{id} - Retrieve an Album
+    // Retrieve an Album based on Id
     @GetMapping("/{id}")
     public ResponseEntity<?> getAlbumById(@RequestHeader("Authorization") String token,
                                           @PathVariable Long id) {
@@ -41,7 +40,7 @@ public class AlbumController {
         return ResponseEntity.ok(album);
     }
 
-    // POST /albums/add-album - Add New Album
+    //  Add New Album
     @PostMapping("/add-album")
     public ResponseEntity<?> addAlbum(@RequestHeader("Authorization") String token,
                                       @RequestBody Album album) {

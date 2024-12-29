@@ -29,7 +29,6 @@ public class TrackService {
     }
 
     public ResponseEntity<Object> getAllTracks(Integer limit, Integer offset, String artistId, String albumId, Boolean hidden) {
-        // Logic to filter tracks based on query params and paginate
         return ResponseEntity.status(200).body("Tracks fetched successfully");
     }
 
